@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Perkins AI Front Desk — Pricing (Story)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;}
+html,body{margin:0;height:100%;overflow:hidden;background:radial-gradient(120% 90% at 50% 0%,#efe7d6,#e4d9c3);}
+.fit{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
+.stage{--ink:#211c17;--mut:#6f6557;--gold:#c2922c;--goldL:#f0cf7a;width:1080px;height:1920px;flex:none;transform-origin:center center;
+ position:relative;overflow:hidden;padding:96px 72px 72px;font-family:'Inter',system-ui,sans-serif;
+ background:radial-gradient(125% 95% at 12% -4%,#fcf8f0 0%,#f4ecdd 48%,#eee4d1 100%);}
+.aura{position:absolute;border-radius:50%;filter:blur(110px);opacity:.55;pointer-events:none;}
+.a1{left:-140px;top:-120px;width:560px;height:560px;background:radial-gradient(circle,#f3d27e,transparent 68%);animation:dr 11s ease-in-out infinite;}
+.a2{right:-130px;top:520px;width:520px;height:520px;background:radial-gradient(circle,#8fe4d3,transparent 70%);animation:dr 14s ease-in-out infinite;}
+.a3{left:30%;bottom:-180px;width:600px;height:540px;background:radial-gradient(circle,#c7b6ff,transparent 72%);animation:dr 12s ease-in-out infinite;}
+@keyframes dr{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-26px)}}
+.hd{position:relative;text-align:center;z-index:2;}
+.br{display:inline-flex;align-items:center;gap:14px;margin-bottom:18px;}
+.gem{width:30px;height:34px;background:linear-gradient(135deg,#f3dca0,#b8902f);clip-path:polygon(50% 0,100% 30%,75% 100%,25% 100%,0 30%);box-shadow:0 0 20px rgba(194,146,44,.6);}
+.br b{font-size:21px;font-weight:900;letter-spacing:4px;color:#8a6716;}
+.br b span{background:linear-gradient(90deg,#c2922c,#e7c065);-webkit-background-clip:text;background-clip:text;color:transparent;}
+h1{margin:6px 0 14px;font-family:'Playfair Display',serif;font-weight:900;font-size:68px;line-height:1.02;color:var(--ink);letter-spacing:-1px;}
+h1 i{font-style:normal;background:linear-gradient(90deg,#c2922c,#eccb78 60%,#b9892a);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.sub{font-size:27px;color:var(--mut);max-width:840px;margin:0 auto;line-height:1.45;font-weight:500;}
+.tiers{position:relative;z-index:2;display:flex;flex-direction:column;gap:30px;margin-top:54px;}
+.card{border-radius:30px;padding:34px 40px;position:relative;display:flex;align-items:flex-start;gap:30px;}
+.light{background:rgba(255,255,255,.66);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1.5px solid rgba(120,95,40,.2);box-shadow:0 34px 70px -34px rgba(80,60,20,.5);}
+.c1{animation:fl1 7.5s ease-in-out infinite;}
+.c3{animation:fl3 8.5s ease-in-out infinite;}
+@keyframes fl1{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes fl3{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.pop{background:linear-gradient(150deg,#2c2636 0%,#1c1925 100%);color:#fff;border:1.5px solid rgba(240,207,122,.5);box-shadow:0 50px 90px -34px rgba(20,12,0,.6),0 0 0 2px rgba(240,207,122,.45);transform:scale(1.035);z-index:4;overflow:hidden;animation:flp 6.5s ease-in-out infinite;}
+@keyframes flp{0%,100%{transform:scale(1.035) translateY(0)}50%{transform:scale(1.035) translateY(-14px)}}
+.pop::before{content:"";position:absolute;top:-60%;left:-30%;width:55%;height:220%;background:linear-gradient(105deg,transparent,rgba(240,207,122,.18),transparent);transform:rotate(8deg);animation:sweep 5.5s linear infinite;}
+@keyframes sweep{0%{left:-40%}60%,100%{left:130%}}
+.badge{position:absolute;top:-18px;left:40px;font-size:17px;font-weight:900;letter-spacing:2.6px;color:#241a05;background:linear-gradient(135deg,#f6dd9b,#c8992f);padding:9px 20px;border-radius:30px;box-shadow:0 10px 24px -6px rgba(180,130,30,.7);animation:pulse 2.6s ease-in-out infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 10px 24px -6px rgba(180,130,30,.7)}50%{box-shadow:0 10px 34px 0 rgba(240,207,122,.9)}}
+.col-l{flex:0 0 300px;}
+.te{font-size:18px;font-weight:900;letter-spacing:3px;color:var(--gold);}
+.pop .te{color:var(--goldL);}
+.tn{font-family:'Playfair Display',serif;font-weight:800;font-size:33px;margin:6px 0 18px;color:var(--ink);line-height:1.1;}
+.pop .tn{color:#fff;}
+.amt{font-family:'Playfair Display',serif;font-weight:900;font-size:56px;color:var(--ink);line-height:1;}
+.pop .amt{background:linear-gradient(90deg,#f6dd9b,#e7c065);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.per{font-size:18px;font-weight:700;color:var(--mut);margin-top:4px;}
+.pop .per{color:#b6aec4;}
+.mo{font-size:25px;font-weight:800;color:#8a6716;margin-top:14px;}
+.pop .mo{color:var(--goldL);}
+.mo span{color:var(--mut);font-weight:600;font-size:21px;}
+.pop .mo span{color:#b6aec4;}
+.feats{flex:1;list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:16px;}
+.feats li{display:flex;gap:16px;font-size:25px;font-weight:600;color:#39322a;line-height:1.25;align-items:flex-start;}
+.pop .feats li{color:#e9e5f0;}
+.ck{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#e7c065,#c2922c);color:#fff;font-size:17px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px -2px rgba(194,146,44,.6);margin-top:2px;}
+.ft{position:relative;z-index:2;margin-top:48px;padding-top:28px;border-top:1.5px solid rgba(120,95,40,.18);text-align:center;font-size:24px;font-weight:800;color:var(--ink);}
+.ft span{color:var(--gold);}
+.ft .c{display:block;margin-top:8px;font-size:21px;font-weight:600;color:var(--mut);}
+</style>
+</head>
+<body>
+<div class="fit">
+ <div class="stage">
+  <div class="aura a1"></div><div class="aura a2"></div><div class="aura a3"></div>
+  <div class="hd">
+   <div class="br"><span class="gem"></span><b>PERKINS <span>· AI FRONT DESK</span></b></div>
+   <h1>Your 24/7 <i>AI Employee</i></h1>
+   <p class="sub">Answers every customer, books every table &amp; closes every sale across WhatsApp, Instagram &amp; your website — even while you sleep.</p>
+  </div>
+  <div class="tiers">
+   <div class="card light c1">
+    <div class="col-l">
+     <div class="te">STARTER</div><div class="tn">Always-On WhatsApp</div>
+     <div class="amt">₵200</div><div class="per">one-time setup</div>
+     <div class="mo">+ ₵60 <span>/mo service</span></div>
+    </div>
+    <ul class="feats">
+     <li><span class="ck">✓</span>24/7 AI replies on WhatsApp</li>
+     <li><span class="ck">✓</span>Answers FAQs instantly</li>
+     <li><span class="ck">✓</span>Captures every lead</li>
+     <li><span class="ck">✓</span>Daily chat summary</li>
+    </ul>
+   </div>
+   <div class="card pop">
+    <div class="badge">★ MOST POPULAR</div>
+    <div class="col-l">
+     <div class="te">PLUS</div><div class="tn">Full AI Front Desk</div>
+     <div class="amt">₵350</div><div class="per">one-time setup</div>
+     <div class="mo">+ ₵90 <span>/mo service</span></div>
+    </div>
+    <ul class="feats">
+     <li><span class="ck">✓</span>Everything in Starter</li>
+     <li><span class="ck">✓</span>WhatsApp + Instagram</li>
+     <li><span class="ck">✓</span>Books &amp; takes orders</li>
+     <li><span class="ck">✓</span>Live results dashboard</li>
+     <li><span class="ck">✓</span>Monthly tune-up</li>
+    </ul>
+   </div>
+   <div class="card light c3">
+    <div class="col-l">
+     <div class="te">PRO</div><div class="tn">AI Sales Engine</div>
+     <div class="amt">₵550</div><div class="per">one-time setup</div>
+     <div class="mo">+ ₵150 <span>/mo service</span></div>
+    </div>
+    <ul class="feats">
+     <li><span class="ck">✓</span>Everything in Plus</li>
+     <li><span class="ck">✓</span>MoMo / card payments in chat</li>
+     <li><span class="ck">✓</span>All channels + website</li>
+     <li><span class="ck">✓</span>Custom-trained + priority support</li>
+    </ul>
+   </div>
+  </div>
+  <div class="ft">Perkins Creative · <span>Elevate Everything.</span>
+   <span class="c">Pays for itself in a week · perkins-swart.vercel.app · WhatsApp +233 53 871 3916</span>
+  </div>
+ </div>
+</div>
+<script>
+function fit(){var s=Math.min(window.innerWidth/1080,window.innerHeight/1920);document.querySelector('.stage').style.transform='scale('+s+')';}
+window.addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>
