@@ -10,9 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;}
-html,body{margin:0;min-height:100%;background:#08080f;display:flex;align-items:center;justify-content:center;padding:14px;}
+html,body{margin:0;min-height:100%;background:#08080f;display:flex;align-items:center;justify-content:center;padding:14px;overflow-x:hidden;}
 .fd{--cream:#eef1fb;--mut:#8b97b8;--vio:#8b5cf6;--violL:#b79bff;--cyan:#22d3ee;--green:#19d08a;--wa:#1faa55;
- position:relative;width:620px;max-width:100%;border-radius:24px;overflow:hidden;font-family:'Inter',system-ui,sans-serif;
+ position:relative;width:100%;max-width:620px;border-radius:24px;overflow:hidden;font-family:'Inter',system-ui,sans-serif;
  background:radial-gradient(90% 130% at 10% -10%,#211a44,#13101f 46%,#08080f 100%);box-shadow:0 36px 90px -24px rgba(0,0,0,.85);border:1px solid rgba(150,130,255,.16);}
 .fd .blob{position:absolute;border-radius:50%;filter:blur(50px);opacity:.5;}
 .fd .x1{left:-70px;top:-50px;width:260px;height:260px;background:radial-gradient(circle,#8b5cf6,transparent 68%);animation:fl 9s ease-in-out infinite;}
@@ -79,6 +79,21 @@ html,body{margin:0;min-height:100%;background:#08080f;display:flex;align-items:c
 .fd .ev .am{margin-left:auto;font-size:10px;font-weight:800;color:var(--green);}
 .fd .foot{position:relative;z-index:3;text-align:center;font-size:9.5px;font-weight:700;color:var(--mut);padding:11px;margin-top:12px;border-top:1px solid rgba(255,255,255,.07);}
 .fd .foot b{background:linear-gradient(90deg,var(--violL),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+@media (max-width:560px){
+ html,body{padding:8px;align-items:flex-start;}
+ .fd{border-radius:18px;}
+ .fd .top{padding:12px 13px;}
+ .fd .top .ti{font-size:13px;}
+ .fd .body{flex-direction:column;gap:18px;padding:12px 12px 0;}
+ .fd .pcol{width:100%;}
+ .fd .phone{perspective:none;display:flex;justify-content:center;}
+ .fd .dev{transform:none;animation:none;width:100%;max-width:300px;box-shadow:0 14px 30px -10px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06);}
+ .fd .scr{height:60vh;max-height:430px;min-height:340px;}
+ .fd .qr{justify-content:center;}
+ .fd .dash{width:100%;min-width:0;}
+ .fd .t .v{font-size:19px;}
+ .fd .foot{font-size:9px;padding:12px 10px;}
+}
 </style>
 </head>
 <body>
